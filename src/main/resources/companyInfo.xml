@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="street" class="java.lang.String">
+  		<constructor-arg value="1200 Holcomb Bridge"/>
+	</bean>
+	<bean id="companyBean" class="com.ruby.projects.simpleprojects.Company">
+		<property name="address" ref="addressBean"></property>
+		<property name="contactInfo" ref="contactInfoBean"></property>
+    </bean>
+	<bean id="addressBean" class="com.ruby.projects.simpleprojects.Address">
+		<property name="street" ref="street"></property>
+		<property name="city" value="Alpharetta"></property>
+		<property name="state" value="GA"></property>
+		<property name="country" value="USA"></property>
+		<property name="zipCode" value="30005"></property>
+    </bean>
+    <bean id="contactInfoBean" class="com.ruby.projects.simpleprojects.ContactInfo">
+    
+    </bean>
+	<bean id="company" class="com.ruby.projects.simpleprojects.Company">
+    </bean>
+    <bean id="contact" class="com.ruby.projects.simpleprojects.ContactInfo">
+    </bean>
+	<bean id="address" class="com.ruby.projects.simpleprojects.Address">
+    </bean>
+</beans>

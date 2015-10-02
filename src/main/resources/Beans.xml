@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="springTest" class="com.ruby.projects.simpleprojects.SpringTest" scope="prototype">
+    	<property name="springTest2" ref="anotherClass"></property>
+    	<property name="val" value="0"></property>
+    </bean>
+     <bean id="springTest1" class="com.ruby.projects.simpleprojects.SpringTest">
+     	<property name="springTest2" ref="anotherClass"></property>
+    </bean>
+    <bean id="anotherClass" class="com.ruby.projects.simpleprojects.SpringTest2" scope="singleton">
+    	<property name="variable1" value="Value 1"></property>
+    	<property name="variable2" value="Value 2"></property>
+    	<property name="variable3" value="Value 3"></property>
+    	<property name="variable4" value="Value 4"></property>
+    </bean>
+</beans>
