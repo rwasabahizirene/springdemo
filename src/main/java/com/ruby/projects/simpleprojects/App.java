@@ -31,10 +31,7 @@ public class App
 		System.out.println(company);
 		Address add1 = (Address) SpringUtil.getObject("addressBean");
 		Address add2 = (Address) SpringUtil.getObject("address");
-		System.out.println(add1);
-		Company comp2 = (Company) SpringUtil.getObject("company");
-		comp2.setAddress(add1);
-		System.out.println(comp2);
+		System.out.println(add1);;
 		
 	}
 }
